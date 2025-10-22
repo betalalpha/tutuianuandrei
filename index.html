@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutuianu Andrei Alexandru | Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom styles for smooth scrolling and clean font */
+        html {
+            scroll-behavior: smooth;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* 1. Define the Fade-In-Up Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 2. Base state for elements that will be animated */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            will-change: opacity, transform;
+        }
+
+        /* 3. Final state when the element is visible */
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200 antialiased">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-gray-900/95 backdrop-blur-sm shadow-lg border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="#home" class="text-xl font-bold text-sky-400 hover:text-sky-300 transition duration-300">
+                    Tutuianu A. A.
+                </a>
+                <div class="hidden sm:ml-6 sm:flex sm:space-x-4">
+                    <a href="#about" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition duration-300">About</a>
+                    <a href="#skills" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition duration-300">Skills</a>
+                    <a href="#education" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition duration-300">Education</a>
+                    <a href="#experience" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition duration-300">Experience</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">
+
+        <!-- 1. Hero Section - No scroll effect here, it should be visible immediately -->
+        <section id="home" class="text-center pt-10 pb-16">
+            <div class="mb-4">
+                <i data-lucide="code-square" class="w-16 h-16 mx-auto text-sky-400"></i>
+            </div>
+            <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight text-white mb-2">
+                Tutuianu Andrei Alexandru
+            </h1>
+            <p class="text-2xl sm:text-3xl font-light text-gray-400 mb-8">
+                Economic Informatics Student & Junior Developer
+            </p>
+            
+            <!-- Contact Buttons -->
+            <div class="flex justify-center space-x-4">
+                <a href="mailto:decoyondust2@gmail.com" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-xl shadow-sm text-gray-900 bg-sky-400 hover:bg-sky-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500 transition duration-300 transform hover:scale-[1.02]">
+                    <i data-lucide="mail" class="w-5 h-5 mr-2"></i>
+                    Email Me
+                </a>
+                <a href="tel:0773300506" class="inline-flex items-center px-6 py-3 border border-gray-600 text-base font-medium rounded-xl text-white hover:bg-gray-800 transition duration-300 transform hover:scale-[1.02]">
+                    <i data-lucide="phone" class="w-5 h-5 mr-2"></i>
+                    Call
+                </a>
+            </div>
+        </section>
+        
+        <!-- Divider -->
+        <hr class="border-gray-800">
+
+        <!-- 2. About Me Section - Added fade-in-section class -->
+        <section id="about" class="py-10 fade-in-section">
+            <h2 class="text-4xl font-bold text-white mb-6 border-b-4 border-sky-400 inline-block pb-1">About Me</h2>
+            <div class="text-lg leading-relaxed space-y-4 text-gray-300">
+                <p>I am a student at the **Bucharest University of Economic Studies**, majoring in Economic Informatics.</p>
+                <p>I am passionate about technology and data-driven solutions, with hands-on experience in **Object-Oriented Programming, Databases, Data Structures, and Algorithms**.</p>
+                <p>I enjoy solving complex problems and am dedicated to continuously developing my technical and analytical skills to contribute effectively to real-world projects.</p>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <hr class="border-gray-800">
+
+        <!-- 3. Skills Section - Added fade-in-section class -->
+        <section id="skills" class="py-10 fade-in-section">
+            <h2 class="text-4xl font-bold text-white mb-8 border-b-4 border-sky-400 inline-block pb-1">Technical Skills</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Programming Languages -->
+                <div class="bg-gray-800 p-6 rounded-2xl shadow-xl border border-gray-700">
+                    <h3 class="flex items-center text-2xl font-semibold text-sky-400 mb-4">
+                        <i data-lucide="cpu" class="w-6 h-6 mr-3"></i> Programming
+                    </h3>
+                    <ul class="space-y-2 text-lg">
+                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-400"></i> C++ (OOP Foundations)</li>
+                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-400"></i> Python</li>
+                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-400"></i> HTML & CSS (Web Applications)</li>
+                    </ul>
+                </div>
+
+                <!-- Data & Concepts -->
+                <div class="bg-gray-800 p-6 rounded-2xl shadow-xl border border-gray-700">
+                    <h3 class="flex items-center text-2xl font-semibold text-sky-400 mb-4">
+                        <i data-lucide="database" class="w-6 h-6 mr-3"></i> Data & Concepts
+                    </h3>
+                    <ul class="space-y-2 text-lg">
+                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-400"></i> MySQL</li>
+                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-400"></i> Data Structures & Algorithms</li>
+                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-400"></i> Oracle Database Design (Cert.)</li>
+                    </ul>
+                </div>
+
+                <!-- Tools & Methodology -->
+                <div class="bg-gray-800 p-6 rounded-2xl shadow-xl border border-gray-700">
+                    <h3 class="flex items-center text-2xl font-semibold text-sky-400 mb-4">
+                        <i data-lucide="wrench" class="w-6 h-6 mr-3"></i> Tools & Methodology
+                    </h3>
+                    <ul class="space-y-2 text-lg">
+                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-400"></i> Git & Version Control</li>
+                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-400"></i> VS Code</li>
+                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-400"></i> Agile Development</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <hr class="border-gray-800">
+
+        <!-- 4. Education & Experience (Timeline) - Added fade-in-section class -->
+        <section id="education" class="py-10 fade-in-section">
+            <h2 class="text-4xl font-bold text-white mb-10 border-b-4 border-sky-400 inline-block pb-1">Timeline</h2>
+
+            <div class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gray-700">
+                
+                <!-- Education Item -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <!-- Icon -->
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-gray-900 text-sky-400 font-semibold shrink-0">
+                        <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                    </div>
+                    <!-- Card -->
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-gray-800 p-6 rounded-2xl shadow-xl border border-sky-700/50 group-odd:ml-auto group-even:mr-auto">
+                        <p class="text-sky-400 font-medium text-sm mb-1">2024 - 2027</p>
+                        <h3 class="text-xl font-bold text-white mb-2">Bucharest University of Economic Studies (ASE)</h3>
+                        <p class="text-gray-400 mb-3">Bachelor's Degree in Economic Informatics</p>
+                        <ul class="list-disc list-inside text-sm text-gray-500 space-y-1">
+                            <li>Core focus on OOP, Data Structures, and Database Management.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience Item -->
+                <div id="experience" class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <!-- Icon -->
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-gray-900 text-sky-400 font-semibold shrink-0">
+                        <i data-lucide="briefcase" class="w-5 h-5"></i>
+                    </div>
+                    <!-- Card -->
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-gray-800 p-6 rounded-2xl shadow-xl border border-sky-700/50 group-odd:ml-auto group-even:mr-auto">
+                        <p class="text-sky-400 font-medium text-sm mb-1">Oct 2025 - Dec 2025</p>
+                        <h3 class="text-xl font-bold text-white mb-2">Apprenticeship - Ideologiq</h3>
+                        <p class="text-gray-400 mb-3">Web Development Training</p>
+                        <ul class="list-disc list-inside text-sm text-gray-500 space-y-1">
+                            <li>Hands-on work with HTML and CSS for web-based applications.</li>
+                            <li>Utilized Agile methodologies for team-based, flexible development.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 mt-12">
+        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center text-gray-500">
+            <div class="flex justify-center space-x-6">
+                <!-- Mail Link -->
+                <a href="mailto:decoyondust2@gmail.com" target="_blank" class="text-gray-400 hover:text-sky-400 transition duration-300">
+                    <i data-lucide="mail" class="w-6 h-6"></i>
+                </a>
+                <!-- LinkedIn Link -->
+                <a href="https://www.linkedin.com/in/andrei-alexandru-tutuianu-181249239/" target="_blank" class="text-gray-400 hover:text-sky-400 transition duration-300">
+                    <i data-lucide="linkedin" class="w-6 h-6"></i>
+                </a>
+                <!-- GitHub Link -->
+                <a href="https://github.com/betalalpha" target="_blank" class="text-gray-400 hover:text-sky-400 transition duration-300">
+                    <i data-lucide="github" class="w-6 h-6"></i>
+                </a>
+            </div>
+            <p class="mt-4 text-sm">&copy; 2025 Tutuianu Andrei Alexandru. Built with HTML & Tailwind CSS.</p>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons and Intersection Observer -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // ----------------------------------------------------
+        // SCROLL REVEAL LOGIC (Fade-In-Up Effect)
+        // ----------------------------------------------------
+        
+        // Configuration for the Intersection Observer
+        const options = {
+            root: null, // relative to the viewport
+            rootMargin: '0px',
+            threshold: 0.2 // Trigger when 20% of the element is visible
+        };
+
+        // Callback function to handle intersections
+        const callback = (entries, observer) => {
+            entries.forEach(entry => {
+                // If the element is intersecting (visible), apply the animation class
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    // Stop observing once it's visible to save performance
+                    observer.unobserve(entry.target);
+                }
+            });
+        };
+
+        // Create the Intersection Observer instance
+        const observer = new IntersectionObserver(callback, options);
+
+        // Select all elements with the 'fade-in-section' class (excluding the home section)
+        const fadeSections = document.querySelectorAll('.fade-in-section');
+
+        // Start observing each section
+        fadeSections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
